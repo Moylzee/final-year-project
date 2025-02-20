@@ -37,7 +37,6 @@ def remove_properties(diff):
             
     return new_diff
 
-
 # Function to compare two flattened JSON objects with naming convention handling
 def compare_jsons(anchor, swagger):
     diff = {}
@@ -46,8 +45,6 @@ def compare_jsons(anchor, swagger):
     for key in all_keys:
         value1 = anchor.get(key)
         value2 = swagger.get(key)
-
-        # TODO: Add a check if the entire attribute is added so that we can set everything to added
 
         # Skip Attributes that have selfUri 
         if ".selfUri." in key:
@@ -75,7 +72,6 @@ def compare_jsons(anchor, swagger):
                     'removed': removed,
                     'new_enum': enum_values_swagger,
                 }
-
             continue
 
         if ".description" in key and ".type" not in key:
@@ -94,14 +90,6 @@ def compare_jsons(anchor, swagger):
                 }
             continue        
 
-        if key.endswith(".type"):
-            if value1 != value2:
-                diff[key] = {
-                    'old_type': value1,
-                    'new_type': value2
-                }
-            continue
-
         if key.endswith(".example"):
             if value1 != value2:
                 diff[key] = {
@@ -110,8 +98,59 @@ def compare_jsons(anchor, swagger):
                 }
             continue
 
+        if key.endswith(".type"):
+            if ".type" in key and len(key.split(".")) == 2:
+                if key not in anchor:
+                    diff[key] = {
+                        'new_type': value2
+                    }
+            elif value1 != value2:
+                diff[key] = {
+                    'old_type': value1,
+                    'new_type': value2
+                }
+            continue
+
     diff = remove_properties(diff)
     return diff
+
+def new_object_diff(diff):
+    new_diff = {}
+    
+    for key, value in list(diff.items()):  # Iterate over a copy of diff items to allow for modification
+        if key.endswith(".type") and len(key.split(".")) == 2:
+            base_object = key.split(".")[0]
+            
+            # Ensure new object exists in new_diff before adding attributes
+            if base_object not in new_diff:
+                new_diff[base_object] = {}
+
+            new_diff = add_attributes_to_new_object(base_object, diff, new_diff)
+
+            # After adding the attributes to new_diff, remove them from diff
+            if base_object in diff:
+                del diff[base_object]
+
+    print(f"New Diff: {new_diff}")
+    return new_diff
+
+def add_attributes_to_new_object(base_object, diff, new_diff):
+    for key, value in diff.items():
+        if key.startswith(base_object + ".") and key != base_object + ".type":
+            key = key.replace(base_object + ".", "")
+            new_diff[base_object][key] = {}
+
+            # Copy only relevant attributes (exclude `old_` values)
+            for k, v in value.items():
+                if not k.startswith("old_") or v is not None:
+                    new_diff[base_object][key][k] = v
+            
+            # Remove key if it's empty after filtering
+            if not new_diff[base_object][key]:
+                del new_diff[base_object][key]
+    return new_diff
+
+# TODO: It Adds the New Objects fine but does not add the objects that have been modified 
 
 # Load JSON files
 print("Loading JSON files...")
@@ -122,6 +161,7 @@ print("JSON files loaded")
 # Compare the flattened JSON objects
 print("Comparing JSON files...")
 differences = compare_jsons(anchor, latest_swagger)
+differences = new_object_diff(differences)
 print("Comparison complete")
 
 if len(differences) == 0:
