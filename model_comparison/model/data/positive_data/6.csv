@@ -1,0 +1,29 @@
+Attribute,Anchor Value,Updated Value,Status
+SmsAddressProvision.autoCorrectAddress.description,,"This is used when the address is created. If the value is not set or true, then the system will, if necessary, auto-correct the address you provide. Set this value to false if the system should not auto-correct the address.",added
+SmsAddressProvision.autoCorrectAddress.type,,boolean,added
+SmsAddressProvision.city.description,,The city in which this address is in,added
+SmsAddressProvision.city.type,,string,added
+SmsAddressProvision.countryCode.description,,The ISO country code of this address,added
+SmsAddressProvision.countryCode.type,,string,added
+SmsAddressProvision.id.description,,The globally unique identifier for the object.,added
+SmsAddressProvision.id.readOnly,,True,added
+SmsAddressProvision.id.type,,string,added
+SmsAddressProvision.name.description,,Name associated with this address,added
+SmsAddressProvision.name.type,,string,added
+SmsAddressProvision.postalCode.description,,The postal code this address is in,added
+SmsAddressProvision.postalCode.type,,string,added
+SmsAddressProvision.region.description,,The state or region this address is in,added
+SmsAddressProvision.region.type,,string,added
+SmsAddressProvision.selfUri.description,,The URI for this object,added
+SmsAddressProvision.selfUri.format,,uri,added
+SmsAddressProvision.selfUri.readOnly,,True,added
+SmsAddressProvision.selfUri.type,,string,added
+SmsAddressProvision.street.description,,The number and street address where this address is located.,added
+SmsAddressProvision.street.type,,string,added
+SmsAddressProvision.required.0,,city,added
+SmsAddressProvision.required.1,,countryCode,added
+SmsAddressProvision.required.2,,name,added
+SmsAddressProvision.required.3,,postalCode,added
+SmsAddressProvision.required.4,,region,added
+SmsAddressProvision.required.5,,street,added
+SmsAddressProvision.type,,object,added

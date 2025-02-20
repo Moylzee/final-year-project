@@ -1,0 +1,8 @@
+Attribute,Anchor Value,Updated Value,Status
+ActionConfig.description,Defines components of the Action Config.,Defines component,modified
+Response.properties.assets.description,test used in the response,Assets used in the response,modified
+Response.properties.responseType.enum.4,CampaignEmailTemplates,,removed
+RuleSet.properties.dateCreated.description,test time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z,Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z,modified
+Script.properties.modifiedDate.description,Date next is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z,Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z,modified
+SiteConnection.properties.coreSite.readOnly,False,True,modified
+SiteConnection.properties.type.enum.2,test,CloudProxy,modified

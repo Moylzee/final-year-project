@@ -1,0 +1,150 @@
+Update 1:
+Attribute: WorkitemStatusCreate.properties.category.description
+Old Value: 
+New Value: The Category of the Status.
+Status: different
+
+Update 2:
+Attribute: WorkitemStatusCreate.properties.category.enum.0
+Old Value: 
+New Value: Open
+Status: different
+
+Update 3:
+Attribute: WorkitemStatusCreate.properties.category.enum.1
+Old Value: 
+New Value: InProgress
+Status: different
+
+Update 4:
+Attribute: WorkitemStatusCreate.properties.category.enum.2
+Old Value: 
+New Value: Waiting
+Status: different
+
+Update 5:
+Attribute: WorkitemStatusCreate.properties.category.enum.3
+Old Value: 
+New Value: Closed
+Status: different
+
+Update 6:
+Attribute: WorkitemStatusCreate.properties.category.enum.4
+Old Value: 
+New Value: Unknown
+Status: different
+
+Update 7:
+Attribute: WorkitemStatusCreate.properties.category.type
+Old Value: 
+New Value: string
+Status: different
+
+Update 8:
+Attribute: WorkitemStatusCreate.properties.defaultDestinationStatusId.description
+Old Value: 
+New Value: Default destination status to which this Status will transition to if auto status transition enabled.
+Status: different
+
+Update 9:
+Attribute: WorkitemStatusCreate.properties.defaultDestinationStatusId.type
+Old Value: 
+New Value: string
+Status: different
+
+Update 10:
+Attribute: WorkitemStatusCreate.properties.description.description
+Old Value: 
+New Value: The description of the Status. Maximum length of 512 characters.
+Status: different
+
+Update 11:
+Attribute: WorkitemStatusCreate.properties.description.type
+Old Value: 
+New Value: string
+Status: different
+
+Update 12:
+Attribute: WorkitemStatusCreate.properties.destinationStatusIds.description
+Old Value: 
+New Value: A list of destination Statuses where a Workitem with this Status can transition to. If the list is empty Workitems with this Status can transition to all other Statuses defined on the Worktype. A Status can have a maximum of 24 destinations.
+Status: different
+
+Update 13:
+Attribute: WorkitemStatusCreate.properties.destinationStatusIds.items.type
+Old Value: 
+New Value: string
+Status: different
+
+Update 14:
+Attribute: WorkitemStatusCreate.properties.destinationStatusIds.type
+Old Value: 
+New Value: array
+Status: different
+
+Update 15:
+Attribute: WorkitemStatusCreate.properties.name.description
+Old Value: 
+New Value: The name of the Status. Valid length between 3 and 256 characters.
+Status: different
+
+Update 16:
+Attribute: WorkitemStatusCreate.properties.name.type
+Old Value: 
+New Value: string
+Status: different
+
+Update 17:
+Attribute: WorkitemStatusCreate.properties.statusTransitionDelaySeconds.description
+Old Value: 
+New Value: Delay in seconds for auto status transition. Required if defaultDestinationStatusId is provided.
+Status: different
+
+Update 18:
+Attribute: WorkitemStatusCreate.properties.statusTransitionDelaySeconds.format
+Old Value: 
+New Value: int32
+Status: different
+
+Update 19:
+Attribute: WorkitemStatusCreate.properties.statusTransitionDelaySeconds.type
+Old Value: 
+New Value: integer
+Status: different
+
+Update 20:
+Attribute: WorkitemStatusCreate.properties.statusTransitionTime.description
+Old Value: 
+New Value: Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS
+Status: different
+
+Update 21:
+Attribute: WorkitemStatusCreate.properties.statusTransitionTime.format
+Old Value: 
+New Value: local-time
+Status: different
+
+Update 22:
+Attribute: WorkitemStatusCreate.properties.statusTransitionTime.type
+Old Value: 
+New Value: string
+Status: different
+
+Update 23:
+Attribute: WorkitemStatusCreate.required.0
+Old Value: 
+New Value: category
+Status: different
+
+Update 24:
+Attribute: WorkitemStatusCreate.required.1
+Old Value: 
+New Value: name
+Status: different
+
+Update 25:
+Attribute: WorkitemStatusCreate.type
+Old Value: 
+New Value: object
+Status: different
+

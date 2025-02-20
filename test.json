@@ -1,0 +1,23 @@
+{
+  "AttemptLimits.properties.resetPeriod": {
+    "added": ["TEST2", "TEST"],
+    "removed": ["NEVER"],
+    "new enum": ["TODAY", "TEST", "TEST2"]
+  },
+  "AcwSettings.properties.wrapupPrompt": {
+    "added": ["MANDATORY_FORCED_TIMEOUT2"],
+    "removed": [],
+    "new enum": [
+      "MANDATORY",
+      "OPTIONAL",
+      "MANDATORY_TIMEOUT",
+      "MANDATORY_FORCED_TIMEOUT",
+      "MANDATORY_FORCED_TIMEOUT2",
+      "AGENT_REQUESTED"
+    ]
+  },
+  "AttemptLimits.properties.resetPeriod.description": {
+    "old description": "After how long the number of attempts will be set back to 0. Defaults to NEVER.",
+    "new description": "Test"
+  }
+}

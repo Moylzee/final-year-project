@@ -1,0 +1,23 @@
+Update 1:
+Attribute: WorkitemStatusCreate.properties.category.description
+Old Value: 
+New Value: The Category of the Status.
+Status: different
+
+Update 2:
+Attribute: WorkitemStatusCreate.properties.category.enum.0
+Old Value: 
+New Value: Open
+Status: different
+
+Update 3:
+Attribute: WorkitemStatusCreate.properties.category.enum.1
+Old Value: 
+New Value: InProgress
+Status: different
+
+Update 4:
+Attribute: WorkitemStatusCreate.properties.category.enum.2
+Old Value: 
+New Value: Waiting
+Status: different

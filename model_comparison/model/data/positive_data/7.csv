@@ -1,0 +1,14 @@
+Attribute,Anchor Value,Updated Value,Status
+ActionConfig.description,Defines components of the Action Config.,Defines component,modified
+PublishScriptRequestData.properties.scriptId.description,,The id of the script to publish,added
+PublishScriptRequestData.properties.scriptId.type,,string,added
+PublishScriptRequestData.properties.versionId.type,,string,added
+PublishScriptRequestData.required.0,,scriptId,added
+PublishScriptRequestData.type,,object,added
+Script.properties.modifiedDate.description,Date next is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z,Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z,modified
+SiteConnection.properties.coreSite.readOnly,False,True,modified
+SiteConnection.properties.type.enum.2,test,CloudProxy,modified
+SkillGroupWithMemberDivisions.properties.dateCreated.description,,Created date/time of the skill group. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z,added
+SkillGroupWithMemberDivisions.properties.dateCreated.format,,date-time,added
+SkillGroupWithMemberDivisions.properties.dateCreated.readOnly,,True,added
+SkillGroupWithMemberDivisions.properties.dateCreated.type,,string,added
